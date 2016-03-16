@@ -1,0 +1,47 @@
+<section>
+
+    <div class="container-fluid">
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <h1 class="text-center">
+				GWARTZ
+                {{gwartz_points}}
+			</h1>
+            </div>
+            <div class="col-md-2">
+                <h1 class="text-center">
+				VS
+			</h1>
+            </div>
+            <div class="col-md-5">
+                <h1 class="text-center">
+				KLUG
+                {{klug_points}}
+			</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-5">
+                <input type="text" ng-model="gwartz_text" placeholder="What has he done now?" class="form-control input-m"></input>
+                <a class="btn btn-block btn-danger btn-s" ng-click="submit_gwartz()" type="button">Die, Canadian Hipster Scum</a>
+            <h4 ng-repeat="sins in gwartz | orderBy:'-'">{{sins.time | date:'dd-MMM-yy HH:mm'}}: {{sins.text}}</h4>
+            </div>
+            <div class="col-md-2">
+                <h3 class="text-center">
+				 
+			</h3>
+            </div>
+            <div class="col-md-5">
+				<input type="text" size="70" ng-model="klug_text" placeholder="What has he done now?" class="form-control input-m"></input>
+                <a class="btn btn-danger btn-block btn-s" ng-click="submit_klug()" type="button">Die, GerFrAngloKongnese Hipster Scum</a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</section>
